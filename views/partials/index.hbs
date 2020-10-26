@@ -1,0 +1,57 @@
+
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+    <div class="panel panel-primary">
+        <div class="panel-heading">
+            <h3 class="panel-title">{{ footer_title }}</h3>
+        </div>
+        <div class="panel-body">
+            <blockquote>
+                <p>{{ footer_content }}</p>
+            </blockquote>
+        </div>
+    </div>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-8 col-md-offset-2">
+        <div class="row">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                        <div class="col-md-6">
+                            <form class="form-horizontal" action="/play" method="post">
+                                <fieldset>
+                                <label for="nickName">Nick Name</label>
+                                <input id="userin" name="user" type="text" placeholder="Enter nick name here" required class="form-control input-md" autocomplete="off"></br>
+                                <label for="roomID">RoomID</label>
+                                <input id="keyin" name="key" type="text" placeholder="Enter Room ID here" required class="form-control input-md" autocomplete="off"></br>
+                                <button type="submit" id="joinbutton" class="btn btn-info ">Join Room</button>
+                                </fieldset>
+                            </form>
+                        </div>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="panel panel-info">
+                <div class="panel-body">
+                        <div class="col-md-6" >
+                            <form class="form-horizontal" action="/play" method="post">
+                                <fieldset>
+                                <label for="nickName">Nick Name</label>
+                                <input id="user" name="user" type="text" placeholder="Your Name" required class="form-control input-md" autocomplete="off"></br>
+								</br>
+                                 <label for="rumOfPlayer">Number of players</label>
+								<input id="minPlayers" name="minPlayers" type="number" placeholder="Min players to start the Game" required class="form-control input-sm" value="2" min="2" max="5">
+								</br>
+								<button type="submit" class="btn btn-info">New-Game</button> 
+                                </fieldset>
+                            </form>                
+                        </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script type="text/javascript" src="/js/join.js"></script>
