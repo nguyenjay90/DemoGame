@@ -51,7 +51,8 @@
 			$('#mainScreen').html('');
 			$('#startGame').text('Game has Started');
 			$('#startGame').prop('disabled',true);
-			$('#mainScreen').append('<div class="grid_cell" style=".ui-grid-solo { text-align:center; }"><button id="btn1" type="submit"  >Hit Me</button></div>');
+			$('#mainScreen').append('<div class="grid_cell"> <button id="btn1" type="submit"style="  position: relative;left: 50%;transform: translateX(-50%);background-color: #4CAF50; /* Green */border: none;color: white;padding: 15px 32px;text-align: center;text-decoration: none;display: inline-block;font-size: 16px;margin: 4px 2px;cursor: pointer;margin-top: 25px;";">Hit Me</button></div>');
+
 			$('.grid_cell').hover(
 				function(e){
 					var cellId = e.target.id;
@@ -59,7 +60,6 @@
 						socket.emit('cell_hoverOn',{
 							'token' : token,
 							'cellId' : cellId,
-							'color' : color
 						});
 				},
 				function(e){
