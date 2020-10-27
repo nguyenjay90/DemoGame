@@ -155,7 +155,7 @@ module.exports = function (server) {
 							if (game.players.length == 1 && game.status === "ready") {
 								console.log("game done");
 								socket.broadcast.to(token).emit('abort', {
-									'display_data': 'You are the Winner <\br>Start another Game <a href="/">here</a>.'
+									'display_data': 'You are the Winner .Start another Game <a href="/">here</a>.'
 								});
 								game.players[0].socket.leave(token);
 								delete game;
