@@ -29,7 +29,7 @@ module.exports = function (server) {
 					root: username
 				};
 
-				socket.join(room);s
+				socket.join(room);
 				socket.emit('wait', {
 					'display_data': 'Your Game room is : <b>' + data.token + '</b><br>Waiting for other players to join...'
 				});
